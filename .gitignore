@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# environment files (NEVER commit secrets)
+.env
+.env.*
+!.env.example
+
+# build output
+dist/
+build/
+.next/
+coverage/
+
+# logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
