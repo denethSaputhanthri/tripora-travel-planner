@@ -77,16 +77,22 @@ export function Navbar() {
                 </Button>
               </Link>
               <div className="flex items-center gap-2 pl-2 border-l">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-secondary-foreground font-semibold text-xs">
-                  {user.name.charAt(0).toUpperCase()}
-                </div>
-                <span className="hidden md:inline text-sm font-medium">{user.name}</span>
+                <Link
+                  href="/profile"
+                  className="flex items-center gap-2 hover:opacity-80 transition"
+                  title="View Profile"
+                >
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-secondary-foreground font-semibold text-xs border">
+                    {user.name.charAt(0).toUpperCase()}
+                  </div>
+                  <span className="hidden md:inline text-sm font-medium">{user.name}</span>
+                </Link>
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={handleLogout}
                   title="Log out"
-                  className="h-8 w-8 text-muted-foreground hover:text-destructive"
+                  className="h-8 w-8 text-muted-foreground hover:text-destructive ml-1"
                 >
                   <LogOut className="h-4 w-4" />
                 </Button>
